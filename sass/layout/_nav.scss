@@ -1,0 +1,113 @@
+.nav {
+  @include flexbox(flex, space-between, center, stretch, row);
+  height: 94px;
+
+  &-box {
+    @include flexbox(flex, flex-start, center, stretch, row);
+
+    &__intro {
+      margin: {
+        right: 20px;
+      }
+    }
+
+    &-list {
+      @include flexbox(flex, flex-start, center, 16px, row);
+      height: 94px;
+
+      &-item {
+        &__link {
+          padding: {
+            right: 16px;
+            left: 16px;
+            bottom: 18px;
+            top: 18px;
+          }
+
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          color: $nav-dawn-icon-color;
+        }
+
+        &-link {
+          @include flexbox(flex, flex-start, center, 14px, row);
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          color: $nav-dawn-icon-color;
+
+          padding: {
+            right: 16px;
+            left: 16px;
+            bottom: 18px;
+            top: 18px;
+          }
+
+          i {
+            font-size: 10px;
+            color: $nav-dawn-icon-color;
+          }
+        }
+      }
+    }
+
+    &__tel {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: $nav-dawn-icon-color;
+    }
+
+    &-sun {
+      @include flexbox(flex, center, center, stretch, row);
+      border-radius: 100px;
+
+      margin: {
+        right: 16px;
+        left: 24px;
+      }
+
+      cursor: pointer;
+
+      padding: {
+        top: 20px;
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+      }
+
+      background-color: $sun-bg-color;
+    }
+
+    &-btn {
+      @include flexbox(flex, center, center, 10px, row);
+      background-color: $btn-bg-color;
+      border-radius: 100px;
+      border: 1px solid transparent;
+
+      padding: {
+        top: 18px;
+        bottom: 18px;
+        right: 30px;
+        left: 30px;
+      }
+
+      &__text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: $nav-dawn-icon-color;
+      }
+
+      &--hover:hover {
+        background-color: $btn-bg-color-hover;
+      }
+      transition: all .2s linear;
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      -ms-transition: all .2s linear;
+      -o-transition: all .2s linear;
+}
+  }
+}
